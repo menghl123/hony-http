@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "hn-http": {
+      "root": "projects/hn-http",
+      "sourceRoot": "projects/hn-http/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/hn-http/tsconfig.lib.json",
+            "project": "projects/hn-http/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/hn-http/src/test.ts",
+            "tsConfig": "projects/hn-http/tsconfig.spec.json",
+            "karmaConfig": "projects/hn-http/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/hn-http/tsconfig.lib.json",
+              "projects/hn-http/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "hony-http"

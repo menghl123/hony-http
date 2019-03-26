@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "hn-http": [
+        "dist/hn-http"
+      ],
+      "hn-http/*": [
+        "dist/hn-http/*"
+      ]
+    }
   }
 }
