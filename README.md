@@ -40,7 +40,7 @@ npm install hn-http --save
 
 ```
    
-### rebirth-http service
+### hn-http service
 
 ```typescript
     import {HnHttpClient} from 'hn-http';
